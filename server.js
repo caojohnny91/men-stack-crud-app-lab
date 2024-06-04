@@ -16,9 +16,9 @@ app.get("/", async (req, res) => {
   res.render("index.ejs");
 });
 
-app.get('/foods', (req, res) => {
-    res.send('This is the foods page where submit form info is POSTED');
-});
+// app.get('/foods', (req, res) => {
+//     res.send('This is the foods page where submit form info is POSTED');
+// });
 
 app.get("/foods/new", (req, res) => {
   res.render("foods/new.ejs");

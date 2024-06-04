@@ -7,31 +7,45 @@
   </head>
   <body>
     <h1>Create a New Food!</h1>
+
     <form action="/foods" method="POST">
-      <div>
-        <label for="name">Name:</label>
-        <input type="text" name="name" id="name" required />
-      </div>
+      <fieldset aria-labelledby="submit-legend">
+        <legend id="submit-legend">New Food Submit Form</legend>
 
-      <div>
-        <label for="rating"
-          >Rating: 1 <small>(distgusting)</small> - 5
-          <small>(delicious)</small></label
-        >
-        <input
-          type="number"
-          name="rating"
-          id="rating"
-          min="1"
-          max="5"
-          required
-        />
-      </div>
+        <div>
+          <label for="name">Name:</label>
+          <input
+            type="text"
+            name="name"
+            id="name"
+            placeholder="Food Name"
+            required
+          />
+        </div>
 
-      <div>
-        <label for="isHealthy">This is a healthy food!</label>
-        <input type="checkbox" name="isHealthy" id="isHealthy" required />
-      </div>
+        <div>
+          <label for="rating"
+            >Rating: 1 <small>(distgusting)</small> - 5
+            <small>(delicious)</small></label
+          >
+          <input
+            type="number"
+            name="rating"
+            id="rating"
+            min="1"
+            max="5"
+            required
+          />
+        </div>
+
+        <div>
+          <label for="isHealthy">This is a healthy food!</label>
+          <input type="checkbox" name="isHealthy" id="isHealthy" required />
+        </div>
+      </fieldset>
+
+      <button type="submit">Submit!</button>
+      
     </form>
   </body>
 </html>
