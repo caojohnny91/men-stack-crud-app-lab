@@ -5,6 +5,9 @@ const mongoose = require("mongoose");
 
 const app = express();
 
+// Set the view engine to EJS
+app.set('view engine', 'ejs');
+
 mongoose.connect(process.env.MONGODB_URI);
 mongoose.connection.on("connected", () => {
   console.log(`Connected to MongoDB ${mongoose.connection.name}`);
