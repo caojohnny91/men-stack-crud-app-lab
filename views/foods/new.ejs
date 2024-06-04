@@ -6,6 +6,8 @@
     <title>Create a Food</title>
   </head>
   <body>
+    <%- include('../partials/nav') %>
+
     <h1>Create a New Food!</h1>
 
     <form action="/foods" method="POST">
@@ -25,7 +27,7 @@
 
         <div>
           <label for="tasteRating"
-            >Taste Rating: 1 <small>(distgusting)</small> - 5
+            >Taste Rating: 1 <small>(disgusting)</small> - 5
             <small>(delicious)</small></label
           >
           <input

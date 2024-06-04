@@ -29,6 +29,11 @@ app.get("/foods/new", (req, res) => {
   res.render("foods/new.ejs");
 });
 
+app.get("/foods/:foodId", async (req, res) => {
+  const foundFood = await Food.findById(req.params.foodId);
+  res.render("foods/show.ejs", { food: foundFood });
+});
+
 app.post("/foods", async (req, res) => {
   if (req.body.isHealthy === "on") {
     req.body.isHealthy = true;

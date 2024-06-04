@@ -6,11 +6,15 @@
     <title>Foods Index</title>
   </head>
   <body>
+    <%- include('../partials/nav') %>
+
     <h1>All Foods</h1>
     <ul>
-        <% foods.forEach( food =>{ %>
-            <li><b><%= food.name %>:</b> Taste Rating: <%= food.tasteRating %>/5, Healthy?: <%= food.isHealthy %></li>
-       <% }) %>
+      <% foods.forEach( food =>{ %>
+      <li>
+        <a href="/foods/<%= food._id %>"><b><%= food.name %></b></a>
+      </li>
+      <% }) %>
     </ul>
   </body>
 </html>

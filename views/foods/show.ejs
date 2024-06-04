@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= food.name %></title>
+  </head>
+  <body>
+    <%- include('../partials/nav') %>
+
+    <h1><%= food.name %></h1>
+    <p>
+      The Taste Rating for this food scored a <%= food.tasteRating %>/5 <%
+      if(food.isHealthy === true) { %> and it is HEALTHY! <% } else { %> , but
+      its NOT healthy! <% } %>
+    </p>
+  </body>
+</html>
