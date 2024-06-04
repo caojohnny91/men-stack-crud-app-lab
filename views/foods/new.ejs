@@ -7,5 +7,31 @@
   </head>
   <body>
     <h1>Create a New Food!</h1>
+    <form action="/foods" method="POST">
+      <div>
+        <label for="name">Name:</label>
+        <input type="text" name="name" id="name" required />
+      </div>
+
+      <div>
+        <label for="rating"
+          >Rating: 1 <small>(distgusting)</small> - 5
+          <small>(delicious)</small></label
+        >
+        <input
+          type="number"
+          name="rating"
+          id="rating"
+          min="1"
+          max="5"
+          required
+        />
+      </div>
+
+      <div>
+        <label for="isHealthy">This is a healthy food!</label>
+        <input type="checkbox" name="isHealthy" id="isHealthy" required />
+      </div>
+    </form>
   </body>
 </html>
