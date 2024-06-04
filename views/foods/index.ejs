@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Foods Index</title>
+  </head>
+  <body>
+    <h1>All Foods</h1>
+    <ul>
+        <% foods.forEach( food =>{ %>
+            <li><b><%= food.name %>:</b> Taste Rating: <%= food.tasteRating %>/5, Healthy?: <%= food.isHealthy %></li>
+       <% }) %>
+    </ul>
+  </body>
+</html>

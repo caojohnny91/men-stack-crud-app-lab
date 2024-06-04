@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 
 const foodSchema = new mongoose.Schema({
   name: String,
-  rating: { type: Number, min: 0, max: 5 },
+  tasteRating: { type: Number, min: 0, max: 5 },
   isHealthy: Boolean,
 });
 
