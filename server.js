@@ -45,28 +45,40 @@ app.get("/foods/:foodId", async (req, res) => {
 });
 
 app.post("/foods", async (req, res) => {
-  if (req.body.isHealthy === "on") {
-    req.body.isHealthy = true;
-  } else {
-    req.body.isHealthy = false;
+  try {
+    if (req.body.isHealthy === "on") {
+      req.body.isHealthy = true;
+    } else {
+      req.body.isHealthy = false;
+    }
+    await Food.create(req.body);
+    res.redirect("/foods");
+  } catch (error) {
+    console.log("Error creating food:", error);
   }
-  await Food.create(req.body);
-  res.redirect("/foods");
 });
 
 app.get("/foods/:foodId/edit", async (req, res) => {
-  const foundFood = await Food.findById(req.params.foodId);
-  res.render("foods/edit.ejs", { food: foundFood });
+  try {
+    const foundFood = await Food.findById(req.params.foodId);
+    res.render("foods/edit.ejs", { food: foundFood });
+  } catch (error) {
+    console.log("Error getting food:", error);
+  }
 });
 
 app.put("/foods/:foodId", async (req, res) => {
-  if (req.body.isHealthy === "on") {
-    req.body.isHealthy = true;
-  } else {
-    req.body.isHealthy = false;
+  try {
+    if (req.body.isHealthy === "on") {
+      req.body.isHealthy = true;
+    } else {
+      req.body.isHealthy = false;
+    }
+    await Food.findByIdAndUpdate(req.params.foodId, req.body);
+    res.redirect(`/foods/${req.params.foodId}`);
+  } catch (error) {
+    console.log("Error updating food:", error);
   }
-  await Food.findByIdAndUpdate(req.params.foodId, req.body);
-  res.redirect(`/foods/${req.params.foodId}`);
 });
 
 app.delete("/foods/:foodId", async (req, res) => {
