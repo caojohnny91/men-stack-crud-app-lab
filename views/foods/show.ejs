@@ -14,5 +14,10 @@
       if(food.isHealthy === true) { %> and it is HEALTHY! <% } else { %> , but
       its NOT healthy! <% } %>
     </p>
+    <a href="/foods/<%= food._id %>/edit">Edit <%= food.name %></a>
+    <form action="/foods/<%=food._id%>?_method=DELETE" method="POST" onsubmit="return confirm('Are you sure you want to delete <%=food.name%>?');">
+        <button type="submit">Delete <%=food.name%></button>
+    </form>
+    <a href="/foods">Back To Foods</a>
   </body>
 </html>

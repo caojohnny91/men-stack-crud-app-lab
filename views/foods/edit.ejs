@@ -1,0 +1,14 @@
+<body>
+    <h1>Edit <%= food.name %></h1>
+    <form action="/foods/<%=food._id%>?_method=PUT" method="POST" onsubmit="return confirm('Are you sure that you want to edit <%= food.name %>?');">
+      <label for="name">Name:</label>
+      <input type="text" name="name" id="name" value="<%= food.name %>" />
+  
+      <label form="isHealthy">This is a healthy food!</label>
+      <input type="checkbox" name="isHealthy" <% if (food.isHealthy) { %>checked<% } %> >
+      <!-- update the button text -->
+      <button type="submit">Update Food</button>
+    </form>
+    <a href="/foods">Back To Foods</a>
+  </body>
+  
