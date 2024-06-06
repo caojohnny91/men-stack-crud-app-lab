@@ -1,31 +1,124 @@
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:opsz@9..40&display=swap");
 body {
-    background: #fff8ed;
-    font-family: "DM Sans", sans-serif;
+  background: #fff8ed;
+  font-family: "DM Sans", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 100vw;
+}
+
+h1 {
+  color: #769642;
+  font-size: 3.6em;
+}
+
+footer {
+  font-size: 0.7em;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  padding: 10px;
+}
+
+.food-pic1 {
+  margin-top: 30px;
+  width: 45%;
+}
+
+.foods-index-link {
+  text-decoration: none;
+}
+
+.index-link-text {
+  background-color: #f47b5b;
+  color: white;
+  font-size: 1.4em;
+  width: 10em;
+  padding: 5px 15px;
+  margin: 15px;
+  border-radius: 25px;
+  text-align: center;
+  box-shadow: 0 5px #ffbd59;
+}
+
+.index-link-text:hover {
+  background-color: #ffbd59;
+  box-shadow: 0 5px #f47b5b;
+  transition: 0.5s;
+}
+
+/* when the button is pressed */
+.index-link-text:active {
+  background-color: #f47b5b;
+  box-shadow: 0 2.5px #ffbd59;
+}
+form {
+  font-family: "DM Sans", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  background-color: #ffbd59;
+  padding: 20px 30px;
+  border-radius: 20px;
+  box-shadow: 5px 6px #f47b5b;
+}
+
+.checkbox-div {
+  flex-direction: row;
+}
+
+label,
+input {
+  margin: 10px 2px 0 2px;
+}
+
+button {
+  align-self: center;
+  margin: 10px 4px 4px 4px;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 15px;
+  border: none;
+  width: 15em;
+}
+
+button:hover {
+  background-color: #769642;
+}
+
+button:active {
+  background-color: #2d4d3a;
+}
+
+.food-actions {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-direction: row;
     justify-content: center;
-    max-width: 100vw;
-  }
-  
-  h1 {
-    color: #769642;
-    font-size: 3.6em;
-  }
-  
-  footer {
-    font-size: 0.7em;
-    position: fixed;
-    left: 0;
-    bottom: 0;
+    align-items: center;
     width: 100%;
-    text-align: center;
-    padding: 10px;
-  }
-  
-  .food-pic1 {
-    padding-top: 20px;
-    width: 45%;
-  }
-  
+    height: 130px;
+    padding: 20px 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
