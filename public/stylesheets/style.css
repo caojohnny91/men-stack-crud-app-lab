@@ -14,6 +14,9 @@ h1 {
   color: #769642;
   font-size: 3.6em;
 }
+h2 {
+    margin-top: -30px;
+}
 
 footer {
   font-size: 0.7em;
@@ -27,7 +30,7 @@ footer {
 
 .food-pic1 {
   margin-top: 30px;
-  width: 30%;
+  width: 40%;
 }
 
 /* HOME  BUTTON */
