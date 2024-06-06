@@ -9,11 +9,13 @@
   <body>
     <%- include('../partials/nav') %>
 
-    <h1>All Foods</h1>
+    <div clsss="index-header-div">
+      <h1>All Foods</h1>
+    </div>
     <ul>
       <% foods.forEach( food =>{ %>
       <li>
-        <a href="/foods/<%= food._id %>"><b><%= food.name %></b></a>
+        <a class= "food-cards" href="/foods/<%= food._id %>"><b><%= food.name %></b></a>
       </li>
       <% }) %>
     </ul>

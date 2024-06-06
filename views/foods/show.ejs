@@ -10,19 +10,27 @@
     <%- include('../partials/nav') %>
     <div class="food-details">
     <h1><%= food.name %></h1>
-    <p>
+    <h3>
       The Taste Rating for this food scored a <%= food.tasteRating %>/5 <%
       if(food.isHealthy === true) { %> and it is HEALTHY! <% } else { %> , but
       its NOT healthy! <% } %>
-    </p>
+    </h3>
     </div>
 
     <div class="food-actions">
-      <a href="/foods/<%= food._id %>/edit">Edit <%= food.name %></a>
-      <form action="/foods/<%=food._id%>?_method=DELETE" method="POST" onsubmit="return confirm('Are you sure you want to delete <%=food.name%>?');">
-          <button clas="delete-button" type="submit">Delete <%=food.name%></button>
+
+      <a class="edit-link" href="/foods/<%= food._id %>/edit">
+        <div class="edit-text">Edit <%= food.name %></div>
+      </a>
+
+      <form class="delete-form "action="/foods/<%=food._id%>?_method=DELETE" method="POST" onsubmit="return confirm('Are you sure you want to delete <%=food.name%>?');">
+
+          <button class="delete-button" type="submit">Delete <%=food.name%></button>
+
       </form>
+
     </div>
+
     <div>
       <a class="foods-index-link" href="/foods">
         <div class="index-link-text">Back To Foods</div>
