@@ -82,8 +82,12 @@ app.put("/foods/:foodId", async (req, res) => {
 });
 
 app.delete("/foods/:foodId", async (req, res) => {
-  await Food.findByIdAndDelete(req.params.foodId);
-  res.redirect("/foods");
+  try {
+    await Food.findByIdAndDelete(req.params.foodId);
+    res.redirect("/foods");
+  } catch (error) {
+    console.log("Error deleting food:", error);
+  }
 });
 
 app.listen(port, () => {
