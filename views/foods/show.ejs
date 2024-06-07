@@ -3,32 +3,38 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/stylesheets/style.css" />
+
+    <link rel="stylesheet" href="/stylesheets/mult-pages.css" />
+    <link rel="stylesheet" href="/stylesheets/show-page.css" />
+
     <title><%= food.name %></title>
   </head>
   <body>
     <%- include('../partials/nav') %>
     <div class="food-details">
-    <h1><%= food.name %></h1>
-    <h3>
-      The Taste Rating for this food scored a <%= food.tasteRating %>/5 <%
-      if(food.isHealthy === true) { %> and it is HEALTHY! <% } else { %> , but
-      its NOT healthy! <% } %>
-    </h3>
+      <h1><%= food.name %></h1>
+      <h3>
+        The Taste Rating for this food scored a <%= food.tasteRating %>/5 <%
+        if(food.isHealthy === true) { %> and it is HEALTHY! <% } else { %> , but
+        its NOT healthy! <% } %>
+      </h3>
     </div>
 
     <div class="food-actions">
-
       <a class="edit-link" href="/foods/<%= food._id %>/edit">
         <div class="edit-text">Edit <%= food.name %></div>
       </a>
 
-      <form class="delete-form "action="/foods/<%=food._id%>?_method=DELETE" method="POST" onsubmit="return confirm('Are you sure you want to delete <%=food.name%>?');">
-
-          <button class="delete-button" type="submit">Delete <%=food.name%></button>
-
+      <form
+        class="delete-form"
+        action="/foods/<%=food._id%>?_method=DELETE"
+        method="POST"
+        onsubmit="return confirm('Are you sure you want to delete <%=food.name%>?');"
+      >
+        <button class="delete-button" type="submit">
+          Delete <%=food.name%>
+        </button>
       </form>
-
     </div>
 
     <div>
